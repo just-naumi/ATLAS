@@ -1,0 +1,274 @@
+<mxfile host="65bd71144e">
+    <diagram id="sequencediagram" name="Page-1">
+        <mxGraphModel dx="1524" dy="1033" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <!-- Lifelines -->
+                <mxCell id="100" value="Masinis" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="80" width="80" height="1500" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="ATLAS Device" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="80" width="100" height="1500" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="GPS RTK" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="80" width="100" height="1500" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="Kereta ATLAS Lain" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="80" width="120" height="1500" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="Server" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="730" y="80" width="100" height="1500" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="900" y="80" width="100" height="1500" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="Dashboard" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="1070" y="80" width="100" height="1500" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="Operator" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="1240" y="80" width="80" height="1500" as="geometry"/>
+                </mxCell>
+
+                <!-- Messages -->
+                <!-- 1. activateSystem() -->
+                <mxCell id="200" value="activateSystem()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="90" y="160" as="sourcePoint"/>
+                        <mxPoint x="250" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 2. requestPositionData() -->
+                <mxCell id="201" value="requestPositionData()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="200" as="sourcePoint"/>
+                        <mxPoint x="420" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 3. returnPositionData() -->
+                <mxCell id="202" value="returnPositionData()" style="endArrow=open;dashed=1;endSize=8;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="420" y="240" as="sourcePoint"/>
+                        <mxPoint x="250" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 4. generateTelemetryData() -->
+                <mxCell id="203" value="generateTelemetryData()" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=middle;rounded=0;endArrow=block;strokeColor=#000000;fontColor=#000000;spacingLeft=10;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="280" as="sourcePoint"/>
+                        <mxPoint x="250" y="310" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="280" y="280"/>
+                            <mxPoint x="280" y="310"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 5. sendTelemetryData() -->
+                <mxCell id="204" value="sendTelemetryData()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="350" as="sourcePoint"/>
+                        <mxPoint x="600" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 6. receiveTelemetryData() -->
+                <mxCell id="205" value="receiveTelemetryData()" style="endArrow=open;dashed=1;endSize=8;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="600" y="390" as="sourcePoint"/>
+                        <mxPoint x="250" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 7. calculateDistance() -->
+                <mxCell id="206" value="calculateDistance()" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=middle;rounded=0;endArrow=block;strokeColor=#000000;fontColor=#000000;spacingLeft=10;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="430" as="sourcePoint"/>
+                        <mxPoint x="250" y="460" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="280" y="430"/>
+                            <mxPoint x="280" y="460"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 8. calculateRelativeSpeed() -->
+                <mxCell id="207" value="calculateRelativeSpeed()" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=middle;rounded=0;endArrow=block;strokeColor=#000000;fontColor=#000000;spacingLeft=10;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="490" as="sourcePoint"/>
+                        <mxPoint x="250" y="520" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="280" y="490"/>
+                            <mxPoint x="280" y="520"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 9. calculateTTC() -->
+                <mxCell id="208" value="calculateTTC()" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=middle;rounded=0;endArrow=block;strokeColor=#000000;fontColor=#000000;spacingLeft=10;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="550" as="sourcePoint"/>
+                        <mxPoint x="250" y="580" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="280" y="550"/>
+                            <mxPoint x="280" y="580"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- 10. evaluateCollisionRisk() -->
+                <mxCell id="209" value="evaluateCollisionRisk()" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=middle;rounded=0;endArrow=block;strokeColor=#000000;fontColor=#000000;spacingLeft=10;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="610" as="sourcePoint"/>
+                        <mxPoint x="250" y="640" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="280" y="610"/>
+                            <mxPoint x="280" y="640"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- ALT Fragment for Collision Risk -->
+                <mxCell id="210" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="670" width="230" height="430" as="geometry"/>
+                </mxCell>
+
+                <!-- Alt Option Labels -->
+                <mxCell id="211" value="[Risiko == Safe]" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="675" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="212" value="[Risiko == Warning]" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="785" width="110" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="213" value="[Risiko == Danger]" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="925" width="110" height="20" as="geometry"/>
+                </mxCell>
+
+                <!-- Alt Partition Lines -->
+                <mxCell id="214" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#000000;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="780" as="sourcePoint"/>
+                        <mxPoint x="290" y="780" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="215" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#000000;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="920" as="sourcePoint"/>
+                        <mxPoint x="290" y="920" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Safe Section -->
+                <mxCell id="216" value="setSafeStatus()" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=middle;rounded=0;endArrow=block;strokeColor=#000000;fontColor=#000000;spacingLeft=10;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="710" as="sourcePoint"/>
+                        <mxPoint x="250" y="740" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="280" y="710"/>
+                            <mxPoint x="280" y="740"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Warning Section -->
+                <mxCell id="217" value="activateVisualWarning()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="820" as="sourcePoint"/>
+                        <mxPoint x="90" y="820" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="218" value="activateAudioWarning()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="870" as="sourcePoint"/>
+                        <mxPoint x="90" y="870" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Danger Section -->
+                <mxCell id="219" value="activateVisualWarning()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="950" as="sourcePoint"/>
+                        <mxPoint x="90" y="950" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="220" value="activateAudioWarning()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="990" as="sourcePoint"/>
+                        <mxPoint x="90" y="990" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="221" value="activateAutomaticBraking()" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=middle;rounded=0;endArrow=block;strokeColor=#000000;fontColor=#000000;spacingLeft=10;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="1030" as="sourcePoint"/>
+                        <mxPoint x="250" y="1060" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="280" y="1030"/>
+                            <mxPoint x="280" y="1060"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Kirim ke Server & Database -->
+                <mxCell id="222" value="uploadTelemetryData()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="1130" as="sourcePoint"/>
+                        <mxPoint x="780" y="1130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="223" value="storeTelemetryData()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="780" y="1180" as="sourcePoint"/>
+                        <mxPoint x="950" y="1180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="224" value="dataStored()" style="endArrow=open;dashed=1;endSize=8;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="950" y="1220" as="sourcePoint"/>
+                        <mxPoint x="780" y="1220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Update Dashboard -->
+                <mxCell id="225" value="updateMonitoringData()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="780" y="1270" as="sourcePoint"/>
+                        <mxPoint x="1120" y="1270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Operator Akses Dashboard -->
+                <mxCell id="226" value="viewMonitoringDashboard()" style="endArrow=block;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="1280" y="1320" as="sourcePoint"/>
+                        <mxPoint x="1120" y="1320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Dashboard Tampilkan Data -->
+                <mxCell id="227" value="displayTrainPosition()" style="endArrow=open;dashed=1;endSize=8;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="1120" y="1360" as="sourcePoint"/>
+                        <mxPoint x="1280" y="1360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="228" value="displayDeviceStatus()" style="endArrow=open;dashed=1;endSize=8;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="1120" y="1400" as="sourcePoint"/>
+                        <mxPoint x="1280" y="1400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="229" value="displayWarningHistory()" style="endArrow=open;dashed=1;endSize=8;html=1;rounded=0;strokeColor=#000000;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="1">
+                    <mxGeometry width="50" relative="1" as="geometry">
+                        <mxPoint x="1120" y="1440" as="sourcePoint"/>
+                        <mxPoint x="1280" y="1440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
